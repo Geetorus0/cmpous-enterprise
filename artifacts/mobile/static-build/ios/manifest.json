@@ -1,0 +1,94 @@
+{
+  "id": "dc1bd52c-b4f4-49a4-8f5f-8c171a789a3c",
+  "createdAt": "2026-05-26T09:30:05.330Z",
+  "runtimeVersion": "exposdk:54.0.0",
+  "launchAsset": {
+    "key": "bundle-1779787805330-10008",
+    "contentType": "application/javascript",
+    "url": "https://localhost/1779787805330-10008/_expo/static/js/ios/bundle.js"
+  },
+  "assets": [],
+  "metadata": {},
+  "extra": {
+    "eas": {},
+    "expoClient": {
+      "name": "AEC - Al-Ameen Engineering College",
+      "slug": "mobile",
+      "version": "1.0.0",
+      "orientation": "portrait",
+      "icon": "./assets/images/icon.png",
+      "scheme": "mobile",
+      "userInterfaceStyle": "automatic",
+      "newArchEnabled": true,
+      "splash": {
+        "image": "./assets/images/icon.png",
+        "resizeMode": "contain",
+        "backgroundColor": "#ffffff",
+        "imageUrl": "http://127.0.0.1:8081/assets/./assets/images/icon.png"
+      },
+      "ios": {
+        "supportsTablet": false
+      },
+      "android": {},
+      "web": {
+        "favicon": "./assets/images/icon.png"
+      },
+      "plugins": [
+        [
+          "expo-router",
+          {
+            "origin": "https://replit.com/"
+          }
+        ],
+        "expo-font",
+        "expo-web-browser"
+      ],
+      "experiments": {
+        "typedRoutes": true,
+        "reactCompiler": true
+      },
+      "_internal": {
+        "isDebug": false,
+        "projectRoot": "F:\\New folder\\Campus-Enterprise-main\\artifacts\\mobile",
+        "dynamicConfigPath": {},
+        "staticConfigPath": "F:\\New folder\\Campus-Enterprise-main\\artifacts\\mobile\\app.json",
+        "packageJsonPath": "F:\\New folder\\Campus-Enterprise-main\\artifacts\\mobile\\package.json",
+        "pluginHistory": {
+          "expo-font": {
+            "name": "expo-font",
+            "version": "14.0.11"
+          },
+          "expo-web-browser": {
+            "name": "expo-web-browser",
+            "version": "15.0.11"
+          }
+        }
+      },
+      "sdkVersion": "54.0.0",
+      "platforms": [
+        "ios",
+        "android",
+        "web"
+      ],
+      "extra": {
+        "router": {
+          "origin": "https://replit.com/"
+        }
+      },
+      "iconUrl": "http://127.0.0.1:8081/assets/./assets/images/icon.png",
+      "hostUri": "localhost/ios"
+    },
+    "expoGo": {
+      "debuggerHost": "localhost/ios",
+      "developer": {
+        "tool": "expo-cli",
+        "projectRoot": "F:\\New folder\\Campus-Enterprise-main\\artifacts\\mobile"
+      },
+      "packagerOpts": {
+        "dev": false
+      },
+      "mainModuleName": "node_modules/.pnpm/expo-router@6.0.23_@types+r_950497bba3dbc1f6b1863109f86ef06a/node_modules/expo-router/entry"
+    },
+    "scopeKey": "@anonymous/mobile-7602ed03-47f8-44b9-8ff8-a372369ef890"
+  }
+}
