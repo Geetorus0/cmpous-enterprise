@@ -1,0 +1,1 @@
+{"version":3,"file":"hodDashboardResponseStats.d.ts","sourceRoot":"","sources":["../../../src/generated/types/hodDashboardResponseStats.ts"],"names":[],"mappings":"AAAA;;;;;;GAMG;AAEH,MAAM,MAAM,yBAAyB,GAAG;IACtC,aAAa,EAAE,MAAM,CAAC;IACtB,YAAY,EAAE,MAAM,CAAC;IACrB,aAAa,EAAE,MAAM,CAAC;IACtB,gBAAgB,EAAE,MAAM,CAAC;IACzB,cAAc,EAAE,MAAM,CAAC;IACvB,QAAQ,EAAE,MAAM,CAAC;CAClB,CAAC"}

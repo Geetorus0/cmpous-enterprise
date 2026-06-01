@@ -1,0 +1,463 @@
+Build a production-grade, enterprise-level College ERP + Campus Intelligence mobile application using FlutterFlow.
+
+App Name: AEC 
+Brand: Al-Ameen Engineering College
+developed & Maintained by : Geetorus
+
+Platform:
+- Android
+- iOS
+
+Backend:
+- Supabase
+- PostgreSQL database
+- Supabase authentication
+- Real-time sync
+
+Architecture:
+- Scalable modular architecture
+- Role-based access control
+- Production-ready
+- Mobile-first design
+
+Theme:
+- Premium professional ERP design
+- Modern dashboard UI
+- Clean minimal layout
+- Dark mode
+- Light mode
+- Tamil + English language support
+
+Goal:
+Build a complete digital college management ecosystem for Students, Faculty, HOD, and Admin with attendance, biometric sync, academic monitoring, fees, complaints, analytics, and AI assistant.
+
+====================================================
+GLOBAL FEATURES
+====================================================
+
+Create:
+- Splash screen
+- Secure login
+- Email/mobile login
+- OTP verification
+- Password reset
+- Session persistence
+- Profile management
+- Push notifications
+- In-app notifications
+- Search everywhere
+- Filters
+- Export PDF
+- Export Excel
+- Dashboard analytics
+- Real-time updates
+- Audit logs
+- Settings
+- Help & support
+- Offline cache
+- Loading states
+- Empty states
+- Error handling
+
+User Roles:
+1. Student
+2. Faculty
+3. HOD
+4. Admin
+
+Strict role-based permissions.
+
+====================================================
+DATABASE TABLES
+====================================================
+
+Create complete schema:
+
+students
+faculty
+hods
+admins
+departments
+courses
+subjects
+semesters
+sections
+timetable
+attendance
+faculty_attendance
+faculty_status
+hall_duty
+leave_requests
+internal_marks
+assignments
+study_materials
+fees
+payments
+scholarships
+arrears
+complaints
+notifications
+placement_updates
+bonafide_requests
+biometric_logs
+ai_queries
+analytics
+audit_logs
+
+Use:
+- foreign keys
+- timestamps
+- status fields
+- proper relationships
+
+====================================================
+FACULTY MODULE (MOST IMPORTANT)
+====================================================
+
+Faculty Dashboard:
+- Today's assigned classes
+- Current active class
+- Attendance pending
+- Student alerts
+- Notifications
+- Faculty status
+- Hall duty status
+- Quick actions
+
+----------------------------------------------------
+ONE-TIME FACULTY SETUP
+----------------------------------------------------
+
+Faculty should set only once:
+
+- Faculty name
+- Faculty ID
+- Department
+- Assigned subjects
+- Assigned semesters
+- Assigned sections
+- Default timetable
+- Classroom details
+- Biometric device mapping
+
+Save permanently.
+
+After setup:
+system should automatically know:
+- which class faculty is handling
+- which subject
+- which students belong to that class
+- current active timetable period
+
+====================================================
+SMART ATTENDANCE SYSTEM
+====================================================
+
+Attendance must be extremely fast.
+
+Workflow:
+- Automatically load current class
+- Automatically load subject
+- Automatically load student list
+- Default all students = PRESENT
+- Faculty only marks absent students
+- Optional status:
+  Present
+  Absent
+  Late
+
+Buttons:
+- Mark all present
+- Select absentees
+- Bulk update
+- Submit attendance
+
+Features:
+- Hour-wise attendance
+- Daily attendance
+- Attendance history
+- Edit submitted attendance
+- Attendance reports
+- Search student
+- Filter absentees
+
+Goal:
+Attendance submission should finish within 30 seconds.
+
+====================================================
+FACULTY STATUS TRACKING
+====================================================
+
+Show:
+
+- Present / Absent
+- In class
+- Free
+- Out of campus
+- Hall duty
+- Entry time
+- Exit time
+- Current classroom
+- Current subject
+
+Auto update from biometric logs.
+
+====================================================
+HALL DUTY / ON DUTY
+====================================================
+
+Faculty can submit:
+
+- College name
+- City
+- Reason
+- Date range
+- Description
+
+Status:
+- Pending
+- Approved
+- Rejected
+
+====================================================
+ASSESSMENT MANAGEMENT
+====================================================
+
+Faculty can:
+
+- Add internal marks
+- Add assessment marks
+- Upload assignments
+- Grade assignments
+- Upload question papers
+- Upload notes
+- Upload study materials
+- Student performance analytics
+- Weak student alerts
+
+====================================================
+HOD MODULE
+====================================================
+
+HOD Dashboard:
+
+- Department overview
+- Faculty live status
+- Which faculty in which class
+- Absent faculty
+- Late faculty
+- Pending attendance
+- Faculty punctuality
+- Faculty workload
+- Subject completion percentage
+- Department attendance analytics
+- Weak students
+- High-risk students
+- Complaint monitoring
+
+Approvals:
+- Hall duty approval
+- Leave approval
+- Faculty requests
+
+Reports:
+- Faculty performance
+- Department reports
+
+====================================================
+STUDENT MODULE
+====================================================
+
+Student Dashboard:
+- Welcome card
+- Attendance summary
+- Today's timetable
+- Internal marks summary
+- Fee pending
+- Scholarship card
+- Arrear summary
+- Notifications
+- Quick actions
+
+Profile:
+- Student name
+- Register number
+- Department
+- Course
+- Semester
+- Section
+- Batch
+- Contact info
+- Parent info
+
+Academic:
+- Overall attendance
+- Subject-wise attendance
+- Internal marks
+- Semester results
+- GPA
+- CGPA
+- Arrear count
+- Arrear subject list
+- Performance trends
+- Download marksheets
+
+Assignments:
+- View assignments
+- Submit assignments
+- Upload files
+- Submission history
+
+Fees:
+- Total fees
+- Paid fees
+- Pending fees
+- Payment history
+- Download receipts
+
+Scholarships:
+- Scholarship eligibility
+- Active scholarship
+- Approval status
+- Government scheme details
+
+Complaints:
+- Hostel food complaint
+- Classroom issue
+- Infrastructure issue
+- Faculty complaint
+- Transport issue
+- Anonymous complaint
+
+Complaint tracking:
+- Submitted
+- Under review
+- Resolved
+
+Requests:
+- Leave request
+- Bonafide certificate request
+- ID card request
+
+Resources:
+- Study materials
+- Notes
+- Circulars
+- Placement notifications
+
+====================================================
+ADMIN MODULE
+====================================================
+
+Admin Dashboard:
+- Full college analytics
+- User management
+- Student management
+- Faculty management
+- HOD management
+- Department management
+- Course management
+- Subject management
+- Semester management
+- Fee monitoring
+- Scholarship tracking
+- Complaint resolution
+- Attendance analytics
+- Device sync monitoring
+- Audit logs
+- Role permissions
+
+Management:
+- Create users
+- Edit users
+- Delete users
+- Assign roles
+- Department allocation
+
+Reports:
+- Attendance reports
+- Fee reports
+- Academic reports
+- Faculty reports
+- Export PDF
+- Export Excel
+
+====================================================
+BIOMETRIC INTEGRATION
+====================================================
+
+Create biometric integration placeholder.
+
+Fields:
+- Device ID
+- Device name
+- Device type
+- Staff ID
+- Timestamp
+- In time
+- Out time
+- Sync status
+- Last sync
+
+Logic:
+When staff places thumb on biometric machine:
+- log should enter biometric_logs table
+- faculty status should update automatically
+- in-time/out-time should update automatically
+- attendance dashboard should reflect immediately
+
+====================================================
+AI FEATURES
+====================================================
+
+AI Student Assistant:
+students can ask:
+- what is my attendance
+- what is my fee balance
+- scholarship status
+- tomorrow timetable
+- arrear details
+
+AI Faculty Assistant:
+- attendance insights
+- weak students
+- pending work reminders
+
+Predictive analytics:
+- low attendance risk
+- failure risk
+- fee default risk
+- complaint sentiment analysis
+
+Create analytics cards and charts.
+
+====================================================
+UI REQUIREMENTS
+====================================================
+
+Use premium ERP design.
+
+Include:
+- dashboard cards
+- charts
+- analytics graphs
+- profile avatars
+- status badges
+- notification badges
+- bottom navigation
+- side drawer
+- search bars
+- filters
+- forms
+- tables
+- dialogs
+- confirmation popups
+
+Generate:
+- all screens
+- all navigation
+- reusable components
+- sample data
+- backend bindings
+- Supabase integration
+- complete app flow

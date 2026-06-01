@@ -1,0 +1,259 @@
+openapi: 3.1.0
+info:
+  title: Api
+  version: 0.1.0
+  description: API specification
+servers:
+  - url: /api
+    description: Base API path
+tags:
+  - name: health
+    description: Health operations
+  - name: parent
+    description: Parent operations
+  - name: faculty
+    description: Faculty operations
+  - name: hod
+    description: HOD operations
+  - name: principal
+    description: Principal operations
+paths:
+  /healthz:
+    get:
+      operationId: healthCheck
+      tags: [health]
+      summary: Health check
+      description: Returns server health status
+      responses:
+        "200":
+          description: Healthy
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HealthStatus"
+
+  /parent/dashboard:
+    get:
+      operationId: getParentDashboard
+      tags: [parent]
+      summary: Parent Dashboard
+      description: Returns data for parent dashboard
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ParentDashboardResponse"
+
+  /faculty/dashboard:
+    get:
+      operationId: getFacultyDashboard
+      tags: [faculty]
+      summary: Faculty Dashboard
+      description: Returns data for faculty dashboard
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FacultyDashboardResponse"
+
+  /hod/dashboard:
+    get:
+      operationId: getHodDashboard
+      tags: [hod]
+      summary: HOD Dashboard
+      description: Returns data for HOD dashboard
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HodDashboardResponse"
+
+  /principal/dashboard:
+    get:
+      operationId: getPrincipalDashboard
+      tags: [principal]
+      summary: Principal Dashboard
+      description: Returns data for principal dashboard
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PrincipalDashboardResponse"
+
+components:
+  schemas:
+    HealthStatus:
+      type: object
+      properties:
+        status:
+          type: string
+      required:
+        - status
+
+    ParentDashboardResponse:
+      type: object
+      properties:
+        attendancePercentage:
+          type: number
+        feesDue:
+          type: number
+        marks:
+          type: array
+          items:
+            type: object
+            properties:
+              subject:
+                type: string
+              total:
+                type: number
+              max:
+                type: number
+              grade:
+                type: string
+            required: [subject, total, max, grade]
+        behaviorLogs:
+          type: array
+          items:
+            type: object
+            properties:
+              date:
+                type: string
+              rating:
+                type: string
+              comment:
+                type: string
+              category:
+                type: string
+            required: [date, rating, comment, category]
+      required: [attendancePercentage, feesDue, marks, behaviorLogs]
+
+    FacultyDashboardResponse:
+      type: object
+      properties:
+        activeStatus:
+          type: string
+        todayClasses:
+          type: array
+          items:
+            type: object
+            properties:
+              time:
+                type: string
+              subject:
+                type: string
+              section:
+                type: string
+              room:
+                type: string
+              students:
+                type: number
+              attendanceDone:
+                type: boolean
+              isCurrent:
+                type: boolean
+            required: [time, subject, section, room, students, attendanceDone]
+      required: [activeStatus, todayClasses]
+
+    HodDashboardResponse:
+      type: object
+      properties:
+        stats:
+          type: object
+          properties:
+            totalStudents:
+              type: number
+            totalFaculty:
+              type: number
+            avgAttendance:
+              type: number
+            pendingApprovals:
+              type: number
+            arrearStudents:
+              type: number
+            sections:
+              type: number
+          required: [totalStudents, totalFaculty, avgAttendance, pendingApprovals, arrearStudents, sections]
+        facultySummary:
+          type: array
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+              attendance:
+                type: number
+              status:
+                type: string
+              classes:
+                type: number
+            required: [name, attendance, status, classes]
+        alerts:
+          type: array
+          items:
+            type: object
+            properties:
+              type:
+                type: string
+              message:
+                type: string
+              icon:
+                type: string
+            required: [type, message, icon]
+      required: [stats, facultySummary, alerts]
+
+    PrincipalDashboardResponse:
+      type: object
+      properties:
+        metrics:
+          type: object
+          properties:
+            totalStudents:
+              type: string
+            facultyMembers:
+              type: string
+            activeTimetables:
+              type: string
+            monthlyFees:
+              type: string
+          required: [totalStudents, facultyMembers, activeTimetables, monthlyFees]
+        departmentPerformance:
+          type: array
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+              avgAttendance:
+                type: number
+              syllabusDone:
+                type: number
+              color:
+                type: string
+            required: [name, avgAttendance, syllabusDone, color]
+        pendingHodRequests:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: string
+              sender:
+                type: string
+              type:
+                type: string
+              desc:
+                type: string
+              amount:
+                type: string
+              priority:
+                type: string
+            required: [id, sender, type, desc, amount, priority]
+      required: [metrics, departmentPerformance, pendingHodRequests]

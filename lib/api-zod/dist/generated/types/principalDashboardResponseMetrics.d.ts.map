@@ -1,0 +1,1 @@
+{"version":3,"file":"principalDashboardResponseMetrics.d.ts","sourceRoot":"","sources":["../../../src/generated/types/principalDashboardResponseMetrics.ts"],"names":[],"mappings":"AAAA;;;;;;GAMG;AAEH,MAAM,MAAM,iCAAiC,GAAG;IAC9C,aAAa,EAAE,MAAM,CAAC;IACtB,cAAc,EAAE,MAAM,CAAC;IACvB,gBAAgB,EAAE,MAAM,CAAC;IACzB,WAAW,EAAE,MAAM,CAAC;CACrB,CAAC"}

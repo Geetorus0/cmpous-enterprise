@@ -1,0 +1,1 @@
+{"version":3,"file":"facultyDashboardResponse.d.ts","sourceRoot":"","sources":["../../../src/generated/types/facultyDashboardResponse.ts"],"names":[],"mappings":"AAAA;;;;;;GAMG;AACH,OAAO,KAAK,EAAE,wCAAwC,EAAE,MAAM,4CAA4C,CAAC;AAE3G,MAAM,WAAW,wBAAwB;IACvC,YAAY,EAAE,MAAM,CAAC;IACrB,YAAY,EAAE,wCAAwC,EAAE,CAAC;CAC1D"}
